@@ -9,4 +9,5 @@ A few things i learned in this chapter
 - == is used as equal, obv.
 
 __NEXT STEP WAS EVEN COOLER, WE DID HOW TO USE A CSV__
+
 Which by the way is comma-separated values.
