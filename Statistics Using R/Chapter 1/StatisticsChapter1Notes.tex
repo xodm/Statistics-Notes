@@ -1,0 +1,159 @@
+\documentclass[10pt]{amsart}
+\usepackage{amssymb}
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+%\usepackage{physics}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{ytableau}
+%\usepackage{titlesec}
+\usepackage{graphicx}
+%\usepackage[ngerman]{babel}
+
+\usepackage[shortlabels]{enumitem}
+\usetikzlibrary{graphs,graphs.standard}
+
+\def\*#1{\mathbf{#1}}
+\newcommand\mc{\mathcal}
+\newcommand\ms{\mathscr}
+\newcommand\mb{\mathbf}
+\newcommand\tb{\textbf}
+\newcommand\bb{\mathbb}
+\newcommand\epsi{\varepsilon}
+\newcommand\mf{\mathfrak}
+\newcommand\bs{\setminus}
+\newcommand\cl{\overline}
+\newcommand\del{\partial}
+\newcommand*\dif{\mathop{}\!\mathrm{d}}
+\newcommand\wg{\wedge}
+\newcommand\cnt{\Gamma}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\md}{mod}
+\DeclareMathOperator{\vol}{Vol}
+\DeclareMathOperator{\deck}{Deck}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\hei}{ht}
+\newcommand\td{\widetilde}
+\newcommand\da{\downarrow}
+
+\newcommand*\deffont[1]{\textbf{\textit{#1}}}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{conj}[equation]{Conjecture}
+\newtheorem{quest}[equation]{Question}
+\newtheorem{claim}[equation]{Claim}
+
+
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{defns}[equation]{Definitions}
+\newtheorem{con}[equation]{Construction}
+\newtheorem{examp}[equation]{Example}
+\newtheorem{examps}[equation]{Examples}
+\newtheorem{notn}[equation]{Notation}
+\newtheorem{notns}[equation]{Notations}
+\newtheorem{addm}[equation]{Addendum}
+\newtheorem{exer}[equation]{Exercise}
+
+\newtheorem{warn}[equation]{Warning}
+\newtheorem{sch}[equation]{Scholium}
+\newtheorem{sol*}{Solution}
+
+\numberwithin{equation}{section}
+%\everymath={\displaystyle}
+\bibliographystyle{plain}
+
+\usepackage{soul}
+\usepackage{lineno}
+\linenumbers
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+%\usepackage{fourier}
+%\usepackage{times}
+
+
+\newcommand{\dm}[1]{{\color{brown}David: #1}}
+\newcommand{\ndm}[1]{{\color{orange}David (new): #1}}
+
+\newcommand{\ap}[1]{{\color{blue} Anna: #1 }}
+\newcommand{\nap}[1]{{\color{cyan} Anna (new): #1 }}
+\newcommand{\tq}[1]{{\color{red}tahda: #1}}
+\newcommand{\ntq}[1]{{\color{violet}tahda (new): #1}}
+\newcommand{\pr}[1]{\left(#1\right)}
+
+%--------Metadata: Fill in your info------
+
+\title{Statistics: Chapter 1}
+\author{David}
+
+
+\begin{document}
+
+\maketitle
+\remark{
+Statistics is split into two branches: Descriptive and inferential. The first is when the purpose of an investigation is to describe the date that has or will be collected. The latter is to give a conclusion of a much broader group using a smaller one, to infer. This smaller group is a sample while the larger is a population.
+}
+
+\remark{
+When a characteristic of a person or object changes, it is known as a variable, while the things that dont are known as constants.
+}
+\begin{exer}
+    Identify some of the variables and constants in a study comparing the math achievement of tenth grade boys and girls in the southern United States.
+\end{exer}
+\begin{sol*}
+    Variables: The gender, the achievements. Constants: Location, grade level.
+\end{sol*}
+We need some sort of measurement, this determines what operation may be used.
+\begin{enumerate}
+    \item Nominal Level - This involves whether two objects are similar or dissimilar; example short or non-short, college student or non-college student and so on. This does not focus on comparing two things just if a characteristic is present so it seems. In this case if elements are similar they are given the same numerical number, else different.
+    \item Ordinal Level - This measurement involves on similar or dissimilar but also on ordering such characteristic. For example, what the success in college student, we would rank them. The numbers are relevant and they must have some  ordering of the categories.
+    \item  Interval Level - In here, we do a similar approach to Ordinal Level, except that the difference between assigned number gives some sort of indication. Basically it seems that the numbers given must be relevant. Thus addition and subtraction leads to justifiable conclusions.
+    \item Ratio Level - this seems to be the same as interval except the numbers now have some structure? 0 must represent none or the beginning. This allows us to use multiplication.
+\end{enumerate}
+It is clear that ratio level is much stronger, the level of usefulness is ascending.
+\begin{exer}
+    Identify the level of measurement (nominal, ordinal, interval, or ratio) most likely to be used to measure the following variables:
+\begin{enumerate}
+    \item  Ice cream flavor
+\item  The speed of five runners in a one-mile race, as measured by the runners’ order of finish,
+first, second, third, and so on.
+\item  Temperature measured in degrees Celsius.
+\item  The annual salary of individuals.
+\end{enumerate}
+\end{exer}
+\begin{sol*}
+    Nominal, Ordinal, Interval, Ratio 
+\end{sol*}
+\remark{
+Discrete and continious variables, one is in integers, the other is in any $x\in I\subseteq\mathbb{R}$.
+}
+\begin{exer}
+    LetourpopulationconsistofalleighthgradestudentsintheUnitedStates,and let X represent the region of the country in which the student lives. X is a variable, because there will be different regions for different students. X is not naturally numerically valued, but because X represents a finite number of distinct categories, we can assign numbers to these categories in the following simple way: 1 = Northeast, 2 = North Central, 3 = South, and 4 = West.
+\end{exer}
+\begin{sol*}
+    Obviously, X is discrete and X is nominal level.
+\end{sol*}
+The following is all answers to the book chapter one, along with code.
+\begin{enumerate}
+    \item[10] (a) Look at the dataset, it says \$id, thus id. (b) next is asvmath8, the variable type seems to be Factor w/2 levels "No", "Yes": I believe this is just like python or such. We have Factor? not sure what it means, but i assume it means we have two choices? by the w/2 levels then 1 = "no" and 2 = "yes". We can do NES? to see the sort of data legend? Basically it is if they took adv mathematics or not in 8th grade. (c) It is 48, it states it. We can also as the book hints use dim(NELS), im assuming to get its dimension.  
+    \item[12] This uses Ratio, we could use ordinal and put them into groups.
+\end{enumerate}
+I regressed from doing the rest as they were trivial, also the answers are online.
+\end{document}
+
