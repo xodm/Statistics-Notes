@@ -14,4 +14,4 @@ Which by the way is comma-separated values.
 
 Okay, got to excel, make your own list, the name of the file will be the header and what not. Go to file > export > save as csv
 now, you will go to R and do `the_var_name = read.csv (file.choose(), header = T)`, this will open up a browser which will let you pick the file.
-
+For our example, if it was in the desktop you can also do `Statisticians = read.csv(“~/Desktop/Statisticians.csv”, header = T).`
